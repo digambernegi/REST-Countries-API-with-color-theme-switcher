@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect, useState } from "react";
+import Home from "./home/Home";
+import "./app.css";
+import axios from "axios";
 
+// 'https://restcountries.com/v3.1/all'
 function App() {
+  const [data,setData]=useState([]);
+  const[region,setRegion]=useState('Africa')
+
+  useEffect(() => {
+    async function getData(){
+
+      const res= await  axios.get(`https://restcountries.com/v3.1/region/${region}`)
+     console.log(res.data)
+    setData(res.data)
+     }
+      getData();
+  }, [region])
+
+ /*  useEffect(() => {
+    async function getRegion(){
+     const res= await axios.get(`https://restcountries.com/v3.1/region/${region}`)
+    setRegion(res.data)
+     }
+     getRegion();
+  }, [])
+ */
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Home data={data} filterRegion={region} setFilterRegion={setRegion}/>
+
     </div>
   );
 }

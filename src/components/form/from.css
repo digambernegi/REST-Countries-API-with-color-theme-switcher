@@ -1,0 +1,51 @@
+.searchCategory{
+  display: flex;
+  justify-content: space-between;
+  padding:2rem 5rem;
+}
+
+
+.Input{
+}
+
+input[type="text"],Select {
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0px 2px 5px 0px hsl(0, 14%, 85%);  
+  }
+   
+  .Input input[type="text"] {
+    
+    padding-left: 60px;
+    color: hsl(0, 5%, 53%);
+  }
+  
+  .Input,.dropdown {
+    position: relative;
+  }
+  .Input{
+    width: 500px;
+  }
+  
+  .Input i {
+    position: absolute;
+    left: 1em;
+    top: .3em;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  
+  select{
+    width: 200px;
+  }
+
+  option *{
+    padding: 10px;
+    color: red;
+  }
