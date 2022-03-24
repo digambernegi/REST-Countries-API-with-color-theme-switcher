@@ -1,0 +1,52 @@
+.single_body {
+  display: flex;
+  /* padding: 2rem 5rem; */
+}
+
+.single_body .flagImg {
+  flex: 0.5;
+  padding:0 5em;
+}
+
+.flagInfo {
+  text-align: left;
+  padding:0 1em;
+  flex: 0.4;
+}
+.single_body .flagImg > img {
+  width: 100%;
+  height: auto;
+}
+
+.flagSubInfo{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.flagSubInfo p, .border p{
+    font-weight: 600;
+    color: hsl(0, 3%, 23%);
+}
+.flagSubInfo span{
+    font-weight: 400;
+}
+
+
+.border{
+    margin-top: 2em;
+}
+.border p{
+
+}
+.border span{
+    box-shadow: 0px 1px 5px 0px hsl(0, 14%, 85%);  
+    padding: 8px;
+    margin: 5px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 3px;
+    background-color: hsl(0, 0%, 100%);
+}

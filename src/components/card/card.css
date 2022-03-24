@@ -1,0 +1,37 @@
+.boxWrapper{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 1px 6px 0px rgba(192, 181, 181, 0.75);
+    cursor: pointer;
+    height: 100%;
+}
+
+.boxWrapper:hover{
+   transform: scale(1.1);
+   transition: all .3s ease; 
+}
+
+.boxWrapper img{
+    height: 150px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+}
+
+.flagInfo{
+    padding:10px 20px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.flagInfo .flagTitle{
+    font-size: 16px;
+}
+
+.flagInfo p{
+    padding: 0;
+    margin-top:15px;
+    font-size: 15px;
+}
+
+.flagInfo span{
+    color: grey;
+}

@@ -29,7 +29,7 @@ input[type="text"],Select {
     position: relative;
   }
   .Input{
-    width: 500px;
+    width: 440px;
   }
   
   .Input i {
@@ -45,7 +45,39 @@ input[type="text"],Select {
     width: 200px;
   }
 
-  option *{
-    padding: 10px;
-    color: red;
+   @media (max-width: 1111px){
+
+    .Input{
+      width: 300px;
+    }
+    
+   select{
+      width: 200px;
+    }
+  
   }
+
+  @media screen and (max-width: 640px) and (min-width: 820px){
+
+    .Input{
+      width: 250px;
+    }
+    
+  }
+  
+  @media (max-width: 640px){
+
+    .Input{
+      width: 400px;
+    }
+    
+   select{
+     margin-top: 3em;
+      width: 200px;
+    }
+  
+    .searchCategory{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }  

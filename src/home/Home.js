@@ -3,28 +3,25 @@ import "./home.css";
 import Header from "../components/header/Header";
 import Form from "../components/form/Form";
 import { ThemeContext } from "../context/darkModeContext";
+import Card from "../components/card/Card.jsx";
 
-function Home({data, filterRegion, setFilterRegion}) {
-  const { darkMode,region,setRegion } = useContext(ThemeContext);
+function Home({getDataBySearch,input,setInput, data, filterRegion, setFilterRegion }) {
+  const { darkMode } = useContext(ThemeContext);
 
-  const CountryInfo = data?.map((card) => (
-    
-    <div className="boxWrapper" key={card.aplha2Code}>
-      <img src={card.flags.svg} alt="countryflag" />
-      <div className="flagInfo">
-        <h1 className="flagTitle">{card.altSpellings[2]? (card.altSpellings[2]):(card.altSpellings[1])}</h1>
-        <p className="population">
-          Population: <span>{card.population}</span>
-        </p>
-        <p className="region">
-          Region: <span>{card.region}</span>
-        </p>
-        <p className="capital">
-          Captial: <span>{card.capital}</span>
-        </p>
-      </div>
-    </div>
-  ));
+  const CountryInfo = data?.map((card) => {
+    return (
+      <Card
+        key={card.aplha2Code}
+        img={card.flags.svg}
+        title={
+          card.altSpellings[2] ? card.altSpellings[2] : card.altSpellings[1]
+        }
+        population={card.population}
+        region={card.region}
+        capital={card.capital}
+      />
+    );
+  });
 
   return (
     <>
@@ -32,7 +29,7 @@ function Home({data, filterRegion, setFilterRegion}) {
         <Header />
       </div>
       <div className={darkMode ? "input dark" : "input"}>
-        <Form filterRegion={filterRegion} setFilterRegion={setFilterRegion}/>
+        <Form getDataBySearch={getDataBySearch} input={input} setInput={setInput} filterRegion={filterRegion} setFilterRegion={setFilterRegion} />
       </div>
       <div className={darkMode ? "home dark" : "home"}>{CountryInfo}</div>
     </>
