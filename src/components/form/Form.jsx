@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import "./from.css";
 
 function Form({getDataBySearch,setInput,input,filterRegion,setFilterRegion }) {
-  
+
 console.log(input)
 
   return (
@@ -15,16 +15,16 @@ console.log(input)
         <select name="selectList" id="selectList"
         value={filterRegion}
         onChange={(e) => setFilterRegion(e.target.value)}
-        ClassName="byType"
+        className="byType"
         >
           {/* <option value="All" selected>All</option> */}
           <option value="none"disabled hidden>Filter by Region</option>
-          <option value="Africa" selected>Africa</option>
+          <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
-        
+
         </select>
       </div>
     </div>

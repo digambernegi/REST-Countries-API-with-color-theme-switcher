@@ -2,6 +2,7 @@
     height: 100vh;
     background:hsl(0, 0%, 98%);
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 :root{

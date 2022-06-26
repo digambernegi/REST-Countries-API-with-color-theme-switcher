@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-start;
   padding: 2rem 5rem;
+  cursor: pointer;
 }
 
 .backBtn {
@@ -10,6 +11,8 @@
   border: none;
   box-shadow: 0px 1px 5px 0px hsl(0, 14%, 85%);
   border-radius: 5px;
+  cursor: pointer;
+
 }
 
 .backBtn i{
